@@ -6,7 +6,7 @@ import { EmailNotifier, ScrapeResultDynamoDb } from './aws-services'
 
 const deleteMessageFromSqs = async(sqs: SQS, queueUrl: string, receiptHandle: string): Promise<void> => { 
     console.log(`Deleting with receiptHandle '${receiptHandle}' message from SQS queue`)
-    const response: DeleteMessageCommandOutput = await sqs.send(new DeleteMessageCommand({
+    await sqs.send(new DeleteMessageCommand({
         QueueUrl: queueUrl,
         ReceiptHandle: receiptHandle
     }))

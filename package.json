@@ -1,5 +1,5 @@
 {
-  "name": "Oddbox Scraper",
+  "name": "oddbox-scraper",
   "version": "1.0.0",
   "description": "Get upcoming changes to oddbox deliveries",
   "main": "index.js",
